@@ -37,4 +37,4 @@ async def webhook(update: dict[str, Any]):
     return {'status': 'ok'}
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='109.172.7.171', port=443)
+    uvicorn.run(app, host='109.172.7.171', port=80)
