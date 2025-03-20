@@ -1,4 +1,7 @@
 import asyncio
+
+import uvicorn
+
 import config
 import db
 from bot_init import bot, dp
@@ -32,3 +35,6 @@ async def root():
 async def webhook(update: dict[str, Any]):
     await dp.feed_webhook_update(bot=bot, update=Update(**update))
     return {'status': 'ok'}
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='109.172.7.171', port=80)
